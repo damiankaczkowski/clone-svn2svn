@@ -68,6 +68,10 @@ git svn clone -Rsrc${SRC_REV} --prefix="src-" $1 ./
 echo "SVN2SVN: Clone destination repository"
 git svn clone -Rdst${DST_REV} --prefix="dst-" $2 ./
 
+echo "SVN2SVN: Create a local git user and his email"
+git config --local user.name LuckyUser
+git config --local user.email no@email.com
+
 #create a local branch for the destination repository
 git checkout -b local-dst remotes/dst-git-svn
 
