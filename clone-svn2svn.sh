@@ -60,13 +60,21 @@ fi
 if [[ ! "$DST_REV" = "" ]]
 then
     DST_REV=" --revision=$DST_REV"
+else
+    DST_REV=" --revision=HEAD"
+fi
+
+echo "SVN2SVN: Create destination directory in SVN if it does not exist"
+if ! svn info "$2" 2>1 1>/dev/null
+then
+    svn mkdir -m "created empty directory" "$2"
 fi
 
 echo "SVN2SVN: Clone source repository"
-git svn clone -Rsrc${SRC_REV} --prefix="src-" $1 ./
+git svn clone -Rsrc${SRC_REV} --prefix="src-" "$1" ./
 
 echo "SVN2SVN: Clone destination repository"
-git svn clone -Rdst${DST_REV} --prefix="dst-" $2 ./
+git svn clone -Rdst${DST_REV} --prefix="dst-" "$2" ./
 
 echo "SVN2SVN: Create a local git user and his email"
 git config --local user.name LuckyUser
