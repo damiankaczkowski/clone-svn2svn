@@ -13,9 +13,9 @@ clone-svn2svn.sh [option...] <source_repo_url> <destination_repo_url>
 
 ## Options
 
-*--src-revision*  revision in the source repo
+*--src-revision*  revision range in the source repo
 
-*--dst-revision*  revision in the destination repo
+*--dst-revision*  revision range in the destination repo
 
 This allows revision ranges for partial/cauterized history to be supported.
 $NUMBER, $NUMBER1:$NUMBER2 (numeric ranges), $NUMBER:HEAD, and BASE:$NUMBER
