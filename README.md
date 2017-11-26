@@ -3,7 +3,7 @@
 
 The script clones an SVN repository to a remote SVN site retaining all history of the original repository.
 It uses git-svn to perform its task. The current directory is used as temporary storage.
-You can delete all files if you do not need to syncronise the repositories later.
+You can delete all files if you do not need to synchronise the repositories later.
 
 ## Usage
 
