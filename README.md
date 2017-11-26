@@ -24,7 +24,7 @@ are all supported. See git svn --revision option for more details.
 ## Example
 
 ```
-clone-svn2svn.sh --src-revision 6:HEAD --dst-revision 52:HEAD svn://hexahon/project-swordfish svn://community/project-swordfish
+clone-svn2svn.sh --src-revision 6:HEAD --dst-revision HEAD:HEAD svn://hexahon/project-swordfish svn://community/project-swordfish
 ```
 
 ## Update Cloned Repository from Source Repository
